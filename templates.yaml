@@ -1,0 +1,13 @@
+welcome: Welcome to the Light Saber trainer. Would you like me to open your light sabre?
+
+welcome2: Hope you're enjoying your light sabre training, how can i assist you?
+
+open: Preparing to Open your Sabre.. Be Careful! it's sharp!
+
+close: Closing your light saber. Great Job. May the force be with you
+
+hit: You have had  {{ numbers }} hits, would you like me to reset the counter?
+
+resethit: I have reset you hit counter to zero
+
+noresethit: OK, no problem, i'll keep counting
