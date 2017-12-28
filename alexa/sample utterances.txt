@@ -1,0 +1,21 @@
+YesIntent yes
+YesIntent sure
+YesIntent open
+YesIntent do it
+YesIntent do it you will
+YesIntent let's go
+YesIntent i'm ready
+YesIntent OK
+CloseIntent i'm finished
+CloseIntent i'm tired
+CloseIntent finish
+CloseIntent stop
+CloseIntent enough
+HitIntent what is my score
+HitIntent how many hits
+HitIntent how many hits have i had
+YesResetIntent yes please
+YesResetIntent reset the counter
+NoResetIntent no
+NoResetIntent no thanks
+NoResetIntent continue
