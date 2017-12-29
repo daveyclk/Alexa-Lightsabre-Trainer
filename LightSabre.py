@@ -22,7 +22,7 @@ R_MIN, R_MAX, R_RES = 10, 120, 10  # SetArenaR values
 THETA_MIN, THETA_MAX, THETA_RES = -20,20, 10  # SetArenaTheta values
 PHI_MIN, PHI_MAX, PHI_RES = -45, 45, 10  # SetArenaPhi values
 TSHLD = 1  # SetThreshold value
-VELOCITY_THRESHOLD = 3  # captured vel bigger than that counts as key-press
+VELOCITY_THRESHOLD = 3  # captured vel bigger than that counts as sabre strike
 
 IMG_PATH = join(dirname(argv[0]), 'img')  # path to images
 SOUND_PATH = join(dirname(argv[0]), 'sabresounds')  # path to sound files
@@ -55,7 +55,7 @@ class MainGUI(tk.Label):
         tk.Label.__init__(self, master, image=self.img)
         self.highlightImage, self.hitImages, self.hbHighlightImage = self.initImages()
         self.wlbt = Walabot()  # init the Walabot SDK
-        self.SabreSounds = SabreSounds()  # used to play piano sound
+        self.SabreSounds = SabreSounds()  # used to play sabre sounds
         self.playedLastTime = False
         self.lastTargets = deque([None] * 5)
         self.after(750, self.startWlbt)  # necessary delay to open the window
@@ -64,7 +64,7 @@ class MainGUI(tk.Label):
         self.sabreimagetoggle = False
         
     def initImages(self):
-        """ Loads the piano images from IMG_PATH and returns them.
+        """ Loads the lightsabre images from IMG_PATH and returns them.
             Returns:
                 HBhighlightImages     The Sabre Half Bright image when target is not in range
                 highlightImages     The Sabre Hightlight image when target is in range
@@ -98,13 +98,11 @@ class MainGUI(tk.Label):
         return True
 
     def detectTargetAndReply(self):
-        """ 
-
-            will do nothing until the sabre has been opened by Alexa
-        """
         if True:
+            """
+            The light sabre will only open and work when Alexa has received the correct command
+            """
             if config.sabreopen == 1 and not self.sabretoggle:
-
                 if not self.sabreimagetoggle:    
                     self.img = tk.PhotoImage(file=join(IMG_PATH, 'lightsaber-openHB.gif'))
                     self.configure(image=self.img)
@@ -112,7 +110,9 @@ class MainGUI(tk.Label):
                 time.sleep(5)                
                 self.SabreSounds.playSabreOpen()
                 self.sabretoggle = True
- 
+            """
+            The Light sabre will turn off when Alexa is told to do so
+            """
 
             elif config.sabreopen == 0 and self.sabretoggle:
                 self.SabreSounds.playSabreClosed()
@@ -129,11 +129,7 @@ class MainGUI(tk.Label):
                 self.configure(image=self.img)
                 self.playedLastTime = False
                 return
-
             vel = getVelocity(t.xPosCm for t in self.lastTargets if t is not None)
-
-                   
-            
             if target.zPosCm < R_MAX and config.sabreopen == 1:
                 #if target.xPosCm >= 0 and vel > VELOCITY_THRESHOLD:  # 'press' area
                 if vel > VELOCITY_THRESHOLD:  # 'press' area            
@@ -146,10 +142,10 @@ class MainGUI(tk.Label):
                         config.hit_counter+=1
                         print(str(vel)+'  Its a Hit! '+str(config.hit_counter))
                        
-                else:  # hand is at 'highlight' area
+                else:  # Light Sabre is at 'highlight' area
                     self.configure(image=self.highlightImage)
                     self.playedLastTime = False
-            else:  # hand is too far from the Walabot
+            else:  # Light Sabre is too far from the Walabot
                 if config.sabreopen == 1:
                     self.configure(image=self.hbHighlightImage)
                     self.playedLastTime = False
@@ -160,7 +156,7 @@ class SabreSounds:
 
     def __init__(self):
         """ Initialize the PyGame module and loads the sound files according
-            to the order of notes.
+            to the order of sound FX.
         """
         self.pygame = pygame
         self.pygame.init()

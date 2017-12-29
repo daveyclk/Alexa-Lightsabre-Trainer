@@ -68,8 +68,3 @@ def no_reset_count():
     no_reset_hit_msg = render_template('noresethit')
 
     return statement(no_reset_hit_msg)
-"""
-if __name__ == '__main__':
-
-    app.run(debug=True)
-"""
