@@ -39,10 +39,13 @@ This can be found here
 https://github.com/daveyclk/Alexa-Lightsabre-Trainer  
 In here you will see a few seperate sheets of code. This keeps things nice and neat. it is very easily stitched together
 the sheets are
+
 main.py - This is the program you will run. This sets up threads for the various servers and programs running.
 config.py - this contains the variables that are shared between the sheets
 lightsabre.py - This controls the UI, walabot tracking ans special FX sounds
 lightsabreAlexa.py - This is the flask ask app that will communitcate with the alexa service
+templates.yaml - This holds all the phrases Alexa will say. These are rendered within lightsabreAlexa.py
+
 looks scary, it isn't! provided you have followed the initial setup steps, all you need to do is type this into your command line (this is a windows machine)
 python main.py
 you will see the startup screen pop up
