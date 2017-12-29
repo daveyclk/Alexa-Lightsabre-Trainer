@@ -63,10 +63,10 @@ https://developer.amazon.com/edw/home.html#/skill/create/
 For this skill we only need to work about the first 5 tabs
 This is the Skill information. This is where you fill out the basic details. you need to give it a name and also an invocation name (this is what you shout out to start it up)
 In this case the name and invocation name are the same. Light Sabre Trainer
-![Skill Information](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa Skill Screengrabs/Skill Information.JPG)
+![Skill Information](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa-Skill-Screengrabs/Skill-Information.JPG)
 
 The next page is the interaction model. This is the part where you tell the Alexa service what is going to be said and what sort of responses she can expect
-![Interaction Model](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa Skill Screengrabs/interaction model.JPG)
+![Interaction Model](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa-Skill-Screengrabs/interaction-model.JPG)
 
 for the purposed of this tutorial, just copy and paste the code from my github
 /alexa/lightsabre_intent.json shoud be copied into the intent schema
@@ -74,13 +74,13 @@ for the purposed of this tutorial, just copy and paste the code from my github
 
 The next page is the configuration. This is the part that points the Alexa service to our project. Remember the ngrok url you created? you need that now
 select https and in the default field, paste the ngrok url. Copy all the other radio buttons
-![Configuration](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa Skill Screengrabs/configuration.JPG)
+![Configuration](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa-Skill-Screengrabs/configuration.JPG)
 
 Second to last is the SSL certification page. as we're using ngrok, you need to select the second one in the list
-![SSL Certificate](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa Skill Screengrabs/ssl certificate.JPG)
+![SSL Certificate](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa-Skill-Screengrabs/ssl-certificate.JPG)
 
 And lastly we're going to look at the test page. This is where you enable you skill for testing on your Dot/echo.. but you can also test it using their beta test service. It's all very handy!
-![Test](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa Skill Screengrabs/test.JPG)
+![Test](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/Alexa-Skill-Screengrabs/test.JPG)
 
 ## Testing
 Once you have completed all those things, you should be in a position to have a play! 
@@ -88,9 +88,11 @@ Set up the Walabot as shown in the video, you'll want to stand about 1.5 metres 
 To start the app, simply say "Alexa, start Light Sabre Trainer"
 She will ask you if you'd like to open your light sabre,  you can say yes at this point.
 If you're out of the set arenas range, the light sabre will look Half Bright. like this
+
 ![Lightsabre Open Half Bright](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/img/lightsaber-openHB.gif)
 
 When you move closer it will look like this
+
 ![Lightsabre Open](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/img/lightsaber-open.gif)
 
 Start working on your best light sabre moves! you will see various lightsabre hit images
