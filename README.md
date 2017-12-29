@@ -41,15 +41,15 @@ In here you will see a few seperate sheets of code. This keeps things nice and n
 the sheets are
 
 *main.py - This is the program you will run. This sets up threads for the various servers and programs running.
-*config.py - this contains the variables that are shared between the sheets
-*lightsabre.py - This controls the UI, walabot tracking ans special FX sounds
-*lightsabreAlexa.py - This is the flask ask app that will communitcate with the alexa service
-*templates.yaml - This holds all the phrases Alexa will say. These are rendered within lightsabreAlexa.py
+*config.py - this contains the variables that are shared between the sheets.
+*lightsabre.py - This controls the UI, walabot tracking ans special FX sounds.
+*lightsabreAlexa.py - This is the flask ask app that will communitcate with the alexa service.
+*templates.yaml - This holds all the phrases Alexa will say. These are rendered within lightsabreAlexa.py.
 
 looks scary, it isn't! provided you have followed the initial setup steps, all you need to do is type this into your command line (this is a windows machine)
 'python main.py'
 you will see the startup screen pop up
-![Lightsabre closed](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/img/lightsaber-closed.gif)
+![Lightsabre closed](https://raw.githubusercontent.com/daveyclk/Alexa-Lightsabre-Trainer/master/img/lightsaber-closed.gif)
 The startup screen has the lightsabre turned off
 you will also see the command prompt showing the flask_ask app server running on 127.0.0.1:5000 this is the reason we needed to point ngrok to port 5000.
 Thats it for the app.. but until we add Alexa support, it will do nothing..
