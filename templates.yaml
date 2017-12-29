@@ -10,4 +10,4 @@ hit: You have had  {{ numbers }} hits, would you like me to reset the counter?
 
 resethit: I have reset you hit counter to zero
 
-noresethit: OK, no problem, i'll keep counting
+noresethit: OK, no problem

@@ -14,8 +14,8 @@ CloseIntent enough
 HitIntent what is my score
 HitIntent how many hits
 HitIntent how many hits have i had
-YesResetIntent yes please
+YesResetIntent Reset
 YesResetIntent reset the counter
 NoResetIntent no
 NoResetIntent no thanks
-NoResetIntent continue
+
