@@ -60,6 +60,7 @@ Firstly you'll need to sign up for an amazon developer account here
 Once you've been fully authorised (this can take a day or so as i found out) you're ready to go.
 Next you'll want to begin to create your new skill go here to begin
 https://developer.amazon.com/edw/home.html#/skill/create/ 
+The Alexa skill ID for my skill is - amzn1.ask.skill.3c851c50-cab7-452e-a148-10fb3c822b56
 For this skill we only need to work about the first 5 tabs
 This is the Skill information. This is where you fill out the basic details. you need to give it a name and also an invocation name (this is what you shout out to start it up)
 In this case the name and invocation name are the same. Light Sabre Trainer
